@@ -5,9 +5,6 @@ import GoogleProvider from "next-auth/providers/google"
 import { db } from "../../../Firebase/firebase.config"
 
 
-// const app = initializeApp(firebaseConfig);
-// const firestore = getFirestore(app);
-
 export default NextAuth({
   // Configure one or more authentication providers
   providers: [
@@ -17,7 +14,7 @@ export default NextAuth({
       }),
   ],
   adapter: FirebaseAdapter({
-  db,
+  db:db,
   ...firestoreFunctions,
   }),
 });
