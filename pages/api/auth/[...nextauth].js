@@ -18,6 +18,5 @@ export default NextAuth({
   db:db,
   ...firestoreFunctions,
   }),
-  debug: true,
   theme: 'dark',
 });
