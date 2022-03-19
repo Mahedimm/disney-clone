@@ -59,7 +59,7 @@ const Header = () => {
              }
             {!isUser ? (<button 
             className='ml-auto uppercase border px-4 py-1.5 font-medium tracking-wide hover:bg-white hover:text-black transition duration-200' 
-            onClick={signIn}>Login</button>):
+            onClick={()=>signIn()}>Login</button>):
              <DropdownMenu user={user} signOut={signOut}/>
             }          
         </header>

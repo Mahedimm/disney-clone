@@ -53,7 +53,7 @@ const DropdownMenu = ({user,signOut}) => {
               <div className="px-1 py-1">
                 <Menu.Item>
                   {({ active }) => (
-                    <button onClick={signOut}
+                    <button onClick={()=>signOut()}
                       className={`${
                         active ? 'bg-violet-500 text-white' : 'text-gray-900'
                       } group flex rounded-md  uppercase items-center w-full px-2 py-2 text-sm`}
