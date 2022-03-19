@@ -18,6 +18,12 @@ export default NextAuth({
   db:db,
   ...firestoreFunctions,
   }),
+  signIn: async (user) => {
+    if (!user.id) {
+      Promise.reject();
+    }
+    return Promise.resolve(true);
+  },
   theme: 'dark',
   debug: true,
 });
