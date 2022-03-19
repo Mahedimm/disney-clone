@@ -18,6 +18,11 @@ export default NextAuth({
   db:db,
   ...firestoreFunctions,
   }),
+  callbacks: {
+    async signIn({ user, account, profile, email, credentials }) {
+      return true
+    },
+  },
 
   theme: {
     colorScheme: "dark",
